@@ -2,14 +2,14 @@ import java.util.Scanner;
 class Insertionsort{
     int i=0,j=0,t;
     void Insertion_sort(int a[]){
-        for(i=0;i<a.length;i++){
-            for(j=0;j<i;j++){
-                if(a[i]<a[j]){
-                    t=a[j];
-                    a[j]=a[i];
-                    a[i]=t;
+        for(i=1;i<a.length;i++){
+		t=a[i];
+		j=i;
+		while(j>0 && a[j-1]>=t){
+			a[j]=a[j-1];
+		        --j;
                 }
-            }
+		a[j]=t;
         }
         System.out.println("sorted array");
         for(i=0;i<a.length;i++){
