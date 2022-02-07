@@ -2,7 +2,7 @@ import java.util.Scanner;
 class Bubblesort{
     int i=0,j=0,t;
     void Bubble_sort(int a[]){
-        for(i=0;i<a.length;i++){
+        for(i=0;i<a.length-1;i++){
             for(j=0;j<a.length-1;j++){
                 if(a[j]>a[j+1]){
                     t=a[j];
